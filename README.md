@@ -135,5 +135,3 @@ Calon Frontend Developer
 ## 📄 Lisensi
 
 Project ini dibuat untuk keperluan technical test dan demonstrasi.
-
-```
