@@ -1,75 +1,139 @@
-# Nuxt Minimal Starter
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# 📊 Dashboard & PDF Report Generator
 
-## Setup
+Aplikasi dashboard responsif berbasis **Nuxt** yang digunakan untuk membuat laporan PDF.  
+Project ini dibuat sebagai bagian dari **Technical Test Frontend Developer**.
 
-Make sure to install dependencies:
+---
+
+## ✨ Fitur
+
+- Membuat laporan PDF berdasarkan input pengguna
+- Riwayat pembuatan PDF (disimpan menggunakan LocalStorage)
+- Menghapus seluruh riwayat PDF
+- Tampilan responsif (mobile, tablet, desktop)
+- UI rapi dan user-friendly
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- **Framework:** Nuxt
+- **Bahasa:** TypeScript
+- **Styling:** Tailwind CSS
+- **PDF Generator:** jsPDF
+- **Penyimpanan State:** LocalStorage
+
+---
+
+## 📱 Desain Responsif
+
+Aplikasi ini menggunakan pendekatan **mobile-first** dan mendukung ukuran layar:
+
+- Minimum: **320px**
+- Maksimum: **1920px**
+
+Responsivitas diatur menggunakan breakpoint Tailwind CSS (`sm`, `md`, `lg`, dll), termasuk:
+- Layout satu kolom pada layar kecil
+- Layout multi-kolom pada layar lebih besar
+- Tabel dapat di-scroll secara horizontal pada layar kecil
+
+---
+
+## 📂 Struktur Project (Sederhana)
+
+```
+
+.
+├── app/
+│   ├── pages/
+│   │   └── index.vue        # Halaman utama dashboard
+│   ├── layouts/
+│   │   └── default.vue     # Layout utama
+│   └── app.vue
+├── public/
+├── nuxt.config.ts
+├── package.json
+├── tsconfig.json
+└── README.md
+
+````
+
+---
+
+## ⚙️ Prasyarat
+
+Pastikan tools berikut sudah ter-install:
+
+- **Node.js** (disarankan versi 18 atau lebih baru)
+- **npm**
+
+Cek versi:
+```bash
+node -v
+npm -v
+````
+
+---
+
+## 🚀 Cara Menjalankan Project
+
+### 1️⃣ Clone Repository
 
 ```bash
-# npm
+git clone https://github.com/Abitzz/pdf-report-generator
+cd pdf-report-generator
+```
+
+---
+
+### 2️⃣ Install Dependency
+
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
+### 3️⃣ Jalankan Development Server
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Aplikasi akan berjalan di:
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+```
+http://localhost:3000
 ```
 
-Locally preview production build:
+## 📝 Catatan & Batasan
 
-```bash
-# npm
-npm run preview
+* Project ini bersifat **frontend-only** (tanpa backend).
+* LocalStorage memiliki batas ukuran (~5MB), sehingga implementasi ini ditujukan untuk kebutuhan demo atau technical test.
+* Untuk kebutuhan production, PDF sebaiknya disimpan di backend atau object storage.
 
-# pnpm
-pnpm preview
+---
 
-# yarn
-yarn preview
+## 💡 Catatan Implementasi
 
-# bun
-bun run preview
+* Menggunakan Composition API (`<script setup>`)
+* State dikelola secara lokal menggunakan reaktivitas Vue
+* Struktur kode dibuat bersih dan mudah dibaca
+* Styling menggunakan Tailwind CSS (utility-first)
+* Tidak menggunakan UI framework tambahan agar project tetap ringan
+
+---
+
+## 👨‍💻 Author
+
+**Fauzi Tsabit Kemal**
+Calon Frontend Developer
+
+---
+
+## 📄 Lisensi
+
+Project ini dibuat untuk keperluan technical test dan demonstrasi.
+
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
